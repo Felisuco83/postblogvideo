@@ -1,8 +1,9 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import React, { Component } from "react";
 import Menu from "./menu/menu";
-import videos from "./videos/Videos";
 import Videos from "./videos/Videos";
+import Imagenes from "./imagenes/Imagenes";
+import Carrusel from "./carrusel/Carrusel";
 
 export default class Router extends Component {
   render() {
@@ -21,8 +22,8 @@ export default class Router extends Component {
             }}
           /> */}
           <Route exact path="/" component={Videos} />
-          {/* <Route exact path="/images" component={InsertarDepartamento} />
-          <Route exact path="/images" component={InsertarDepartamento} /> */}
+          <Route exact path="/images" component={Imagenes} />
+          <Route exact path="/carousel" component={Carrusel} />
         </Switch>
       </BrowserRouter>
     );
